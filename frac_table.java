@@ -1,4 +1,4 @@
-class frac_table
+class frac_table	//class to display multiplication table of fractions
 {
 	void table(int n)
 	{
@@ -24,7 +24,7 @@ class frac_table
 				Fraction f2=new Fraction(j,n);
 				Fraction prod=new Fraction();
 				prod.multiply(f1,f2);
-				prod.reduce();
+				prod.reduce();		//reducing current fraction to lowest terms
 				prod.display();
 			}
 			System.out.println();

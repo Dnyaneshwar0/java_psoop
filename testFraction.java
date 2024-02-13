@@ -11,7 +11,7 @@ class testFraction
 		{
 			System.out.println("Enter choice: \n1.Fraction Multiplication Table \n2.Fraction Calculator");
 			int m_ch=k.nextInt();
-			if(m_ch==1)
+			if(m_ch==1)		//
 			{
 				System.out.println("Enter a number:");
 				int num=k.nextInt();
