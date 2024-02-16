@@ -4,13 +4,12 @@ class GradeStatistics
 {
 	int stud[];
 	
-	GradeStatistics(int n)
+	GradeStatistics(int n) 	//Parameterised constructor to create array of length equal to number of students
 	{
 		stud=new int[n];
-		
 	}
 	
-	void display()
+	void display()		//Method to display array of grades entered
 	{
 		System.out.println("Students grade:");
 		for(int i=0;i<stud.length;i++)
@@ -20,7 +19,7 @@ class GradeStatistics
 		System.out.println();
 	} 
 	
-	void input()
+	void input()	//Method to input array of grades
 	{
 		Scanner k=new Scanner(System.in);
 		for(int i=0;i<stud.length;i++)
@@ -36,7 +35,7 @@ class GradeStatistics
 		sort();
 	}
 	
-	boolean check()
+	boolean check()		//Method to check if grades entered are in correct range
 	{
 		for(int i=0;i<stud.length;i++)
 		{
@@ -49,7 +48,7 @@ class GradeStatistics
 		return false;
 	}
 	
-	void sort()
+	void sort()		//Method to sort the array of grades
 	{
 		for(int i=0;i<stud.length;i++)
 		{
@@ -65,7 +64,7 @@ class GradeStatistics
 		}
 	}
 	
-	int max()
+	int max()		//Method to calculate maximum grade
 	{	
 		int max=stud[0];
 		for(int i=1;i<stud.length;i++)
@@ -78,7 +77,7 @@ class GradeStatistics
 		return max;
 	}
 	
-	int min()
+	int min()		//Method to calculate minimum grade
 	{
 		int min=stud[0];
 		for(int i=1;i<stud.length;i++)
@@ -91,7 +90,7 @@ class GradeStatistics
 		return min;
 	}
 	
-	double median()
+	double median()		//Method to calculate median grade
 	{
 		if(stud.length%2==0)
 		{
@@ -103,7 +102,7 @@ class GradeStatistics
 		}
 	}
 	
-	double average()
+	double average()		//Method to calculate average grade
 	{
 		double avg=0;
 		for(int num:stud)
@@ -113,7 +112,7 @@ class GradeStatistics
 		return avg/stud.length;
 	}
 	
-	double std_dev()
+	double std_dev()		//Method to calculate standard deviation in the grades
 	{
 		double mean=average();
 		double dev_sum=0;
@@ -124,7 +123,7 @@ class GradeStatistics
 		return Math.sqrt(dev_sum);
 	}
 	
-	double reduce(double num)
+	double reduce(double num)		//Method to round given value to 2 decimal places
 	{
 		double temp=(double)Math.round(num*100);
 		

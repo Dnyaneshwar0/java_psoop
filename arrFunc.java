@@ -1,44 +1,39 @@
 import java.util.Scanner;
 
-public class arrFunc
+public class ArrFunc
 {
-	int arr[];
+	static Scanner k=new Scanner(System.in);
 	
-	arrFunc(int n)
+	static void input(int arr[])	//Method to take input for array
 	{
-		arr=new int[n];
-	}
-	
-	//input
-	void input()
-	{
-		Scanner k=new Scanner(System.in);
 		for(int i=0;i<arr.length;i++)
 		{
 			arr[i]=k.nextInt();
 		}
 	}
 	
-	//search
-	int search(int val)
+	static void search(int arr[])	//Method to search for an element in the array and print its index if found
 	{
+		System.out.println("Enter element to be searched:");
+		int val=k.nextInt();
 		for(int i=0;i<arr.length;i++)
 		{
 			if(arr[i]==val)
 			{
-				return i;
+				System.out.println("Element found at index: "+i);
+				return;
 			}
 		}
+		System.out.println("Element not found");
 	}
-	
-	//sort
-	void sort()
+
+	static void sort(int arr[])		//Method to sort the array
 	{
 		for(int i=0;i<arr.length;i++)
 		{
 			for(int j=0;j<arr.length-i-1;j++)
 			{
-				if(arr[j]>arr[j+1])
+				if(arr[j]>arr[j+1])	//Sorting using bubble sort algorithm
 				{
 					int temp=arr[j];
 					arr[j]=arr[j+1];
@@ -46,10 +41,10 @@ public class arrFunc
 				}
 			}
 		}
+		System.out.println("Array sorted");
 	}
 	
-	//display
-	void display()
+	static void display(int arr[])		//Method to display the elements of the array
 	{
 		System.out.println("Elements in array: ");
 		for(int i=0;i<arr.length;i++)
@@ -58,5 +53,4 @@ public class arrFunc
 		}
 		System.out.println();
 	}
-
 }
