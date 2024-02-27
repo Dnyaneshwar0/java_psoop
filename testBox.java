@@ -1,8 +1,11 @@
-public class testBox
+class testBox
 {
 	public static void main(String args[])
 	{
-		Box b=new Box(1);
-		System.out.println(b.width);
+		Shipment ob=new Shipment();
+		Scanner k=new Scanner(System.in);
+		
+		System.out.println("Enter dimensions of Box (l, b, h):");
+		//ob.length
 	}
 }

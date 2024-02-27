@@ -1,20 +1,12 @@
-public class Box
+class Box
 {
-	double width, height, depth;
-	int boxNo;
+	int vol;
+	int length;
+	int width;
+	int height;
 	
-	Box(double w, double h, double d, int num)
+	int calcVol()
 	{
-		width=w;
-		height=h;
-		depth=d;
-		boxNo=num;
-	}
-	Box()
-	{}
-	Box(int num)
-	{
-		this();
-		boxNo=num;
+		return length*width*height;
 	}
 }
