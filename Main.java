@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class Main
 {
 	public static void main(String args[])
@@ -9,7 +11,25 @@ class Main
 			case 1:
 				Audi audi=new Audi();
 				audi.getDetails(k);
-				
+                audi.display();
+            break;
+			case 2:
+				Ford ford=new Ford();
+				ford.getDetails(k);
+                ford.display();
+            break;
+			case 3:
+				Bajaj bajaj=new Bajaj();
+				bajaj.getDetails(k);
+                bajaj.display();
+            break;
+			case 4:
+				TVS tvs=new TVS();
+				tvs.getDetails(k);
+                tvs.display();
+            break;
+            default:
+                System.out.println("Invalid Input..!!");
 		}
 	}
 }
